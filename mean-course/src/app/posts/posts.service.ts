@@ -14,7 +14,7 @@ export class PostsService {
   getPosts() {
     this.http
       .get<{ message: string; posts: Post[] }>(
-        'https://3000-bravo1b9-udemymean-a4uesjyj1km.ws-eu89b.gitpod.io/api/posts'
+        'https://3000-bravo1b9-udemymean-a4uesjyj1km.ws-eu90.gitpod.io/api/posts'
       )
       .subscribe((postData) => {
         this.posts = postData.posts;
@@ -29,7 +29,7 @@ export class PostsService {
   addPost(title: string, content: string) {
     const post: Post = { id: null, title, content };
     this.http.post<{ message: string }>(
-      'https://3000-bravo1b9-udemymean-a4uesjyj1km.ws-eu89b.gitpod.io/api/posts',
+      'https://3000-bravo1b9-udemymean-a4uesjyj1km.ws-eu90.gitpod.io/api/posts',
       post
     ).subscribe((responseData) => {
       console.log(responseData.message);
