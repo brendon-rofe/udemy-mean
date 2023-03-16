@@ -1,2 +1,14 @@
 <h1>Posts go here</h1>
 <mat-spinner *ngIf="isLoading"></mat-spinner>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Post Title
+    </mat-expansion-panel-header>
+    <p>Post content</p>
+    <mat-action-row>
+      <a mat-button color="primary">EDIT</a>
+      <button mat-button color="warn" >DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
